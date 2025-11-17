@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>新聞文章 - 產經焦點新聞網</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">產經焦點新聞網</div>
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="category.html?type=紡纖">紡纖</a>
+            <a href="category.html?type=石化">石化</a>
+            <a href="category.html?type=水泥">水泥</a>
+            <a href="category.html?type=零售">零售</a>
+            <a href="category.html?type=金融">金融</a>
+            <a href="category.html?type=電信">電信</a>
+            <a href="category.html?type=公益">公益</a>
+        </nav>
+    </header>
+
+    <!-- Article Header -->
+    <section class="hero">
+        <h1 id="article-title">文章標題</h1>
+        <p id="article-meta">作者：產經焦點新聞網 | 日期：2025/01/01</p>
+    </section>
+
+    <!-- Article Content -->
+    <section class="news-section">
+        <div class="news-card">
+            <p id="article-content">
+                這裡是示範文章內容。未來可依你的需求改成動態載入。
+                <br><br>
+                你可以把這頁當作所有新聞文章共用的模板。
+            </p>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div id="chatbot-toggle">💬</div>
+    <div id="chatbot-window" class="hidden">
+        <div class="chat-header">產經小助手</div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-input">
+            <input id="chat-text" type="text" placeholder="請輸入您的問題..." />
+            <button id="chat-send">送出</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+
+    <script>
+        // Optional: dynamic article loading
+        const urlParams = new URLSearchParams(window.location.search);
+        const t = urlParams.get("title");
+
+        if (t) {
+            document.getElementById("article-title").innerText = decodeURIComponent(t);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>新聞分類 - 產經焦點新聞網</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">產經焦點新聞網</div>
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="category.html?type=紡纖">紡纖</a>
+            <a href="category.html?type=石化">石化</a>
+            <a href="category.html?type=水泥">水泥</a>
+            <a href="category.html?type=零售">零售</a>
+            <a href="category.html?type=金融">金融</a>
+            <a href="category.html?type=電信">電信</a>
+            <a href="category.html?type=公益">公益</a>
+        </nav>
+    </header>
+
+    <!-- Category Title -->
+    <section class="hero">
+        <h1 id="category-name">產業分類</h1>
+        <p>瀏覽此產業的最新新聞與趨勢。</p>
+    </section>
+
+    <!-- News List -->
+    <section class="news-section">
+        <div id="news-container" class="news-grid">
+            <!-- JS 自動載入內容 -->
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div id="chatbot-toggle">💬</div>
+    <div id="chatbot-window" class="hidden">
+        <div class="chat-header">產經小助手</div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-input">
+            <input id="chat-text" type="text" placeholder="請輸入您的問題..." />
+            <button id="chat-send">送出</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+
+    <script>
+        // Get category from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get("type") || "產業";
+
+        document.getElementById("category-name").innerText = type + "新聞";
+
+        // Fake news data for demo
+        const demoData = {
+            "紡纖": [
+                { title: "遠東新聚酯需求回升", desc: "全球紡纖景氣逐步復甦..." },
+                { title: "台化啟動循環材料計畫", desc: "永續材料成為趨勢..." }
+            ],
+            "石化": [
+                { title: "石化景氣觸底反彈", desc: "原油價格帶動成本改善..." },
+                { title: "裂解廠擴產計畫延後", desc: "企業調整資本支出..." }
+            ],
+            "水泥": [
+                { title: "碳費上路衝擊水泥業", desc: "製程改造成為產業焦點..." },
+                { title: "再生建材需求擴張", desc: "綠建築政策助攻..." }
+            ],
+            "零售": [
+                { title: "OMO 模式成長迅速", desc: "線上線下融合加速..." },
+                { title: "會員經濟成新戰場", desc: "數據驅動零售決策..." }
+            ],
+            "金融": [
+                { title: "央行關注通膨變化", desc: "政策利率仍具調整空間..." },
+                { title: "生成式 AI 進入金融風控", desc: "科技提升決策效率..." }
+            ],
+            "電信": [
+                { title: "5G-A 推進與企業專網布局", desc: "電信業走向高階化..." },
+                { title: "AI 基地台節能提升效率", desc: "能源管理技術升級..." }
+            ],
+            "公益": [
+                { title: "影響力投資崛起", desc: "公益不再只是捐款..." },
+                { title: "永續教育向下扎根", desc: "學校端推多元課程..." }
+            ]
+        };
+
+        const list = demoData[type] || [];
+        const container = document.getElementById("news-container");
+
+        list.forEach(item => {
+            const card = document.createElement("div");
+            card.classList.add("news-card");
+            card.innerHTML = `<h3>${item.title}</h3><p>${item.desc}</p>`;
+            container.appendChild(card);
+        });
+    </script>
+
+</body>
+
+</html>

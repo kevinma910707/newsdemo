@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>產經焦點新聞網</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">產經焦點新聞網</div>
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="category.html?type=紡纖">紡纖</a>
+            <a href="category.html?type=石化">石化</a>
+            <a href="category.html?type=水泥">水泥</a>
+            <a href="category.html?type=零售">零售</a>
+            <a href="category.html?type=金融">金融</a>
+            <a href="category.html?type=電信">電信</a>
+            <a href="category.html?type=公益">公益</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>今日焦點新聞</h1>
+        <p>快速掌握紡纖、石化、水泥、零售、金融、電信、公益等產業動態。</p>
+    </section>
+
+    <!-- News Sections -->
+    <section class="news-section">
+        <h2>紡纖新聞</h2>
+        <div class="news-grid">
+            <div class="news-card">
+                <h3>遠東新：2025 年聚酯需求回溫</h3>
+                <p>全球紡纖景氣復甦，需求加速釋放...</p>
+            </div>
+            <div class="news-card">
+                <h3>台化宣布新循環材料計畫</h3>
+                <p>台化加碼投入永續材料研發...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <h2>金融新聞</h2>
+        <div class="news-grid">
+            <div class="news-card">
+                <h3>台灣央行：將密切關注通膨變化</h3>
+                <p>政策利率後續仍具調整空間...</p>
+            </div>
+            <div class="news-card">
+                <h3>金控 ESG 排名公布</h3>
+                <p>永續金融成市場關注焦點...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div id="chatbot-toggle">💬</div>
+    <div id="chatbot-window" class="hidden">
+        <div class="chat-header">產經小助手</div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-input">
+            <input id="chat-text" type="text" placeholder="請輸入您的問題..." />
+            <button id="chat-send">送出</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
