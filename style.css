@@ -64,7 +64,7 @@ main {
 }
 
 /* ===============================
-   各產業小標
+   各產業標題
 =================================*/
 .industry-section h2 {
     font-size: 26px;
@@ -111,7 +111,60 @@ main {
 }
 
 /* ===============================
-   RWD 手機版（一欄）
+   Chatbot 小幫手
+=================================*/
+.chatbot-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+}
+
+.chatbot-header {
+    background: #004a99;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.chatbot-body {
+    height: 260px;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 15px;
+}
+
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+.chatbot-input button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* ===============================
+   RWD（手機版變一欄）
 =================================*/
 @media (max-width: 900px) {
     .news-grid {
