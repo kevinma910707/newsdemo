@@ -150,6 +150,47 @@
     </div>
 
     <script src="chatbot.js"></script>
+<!-- AI Chatbot（獨立渲染，避免受主版型干擾） -->
+<div id="chatbot-container-root"></div>
+
+<script>
+    // 動態注入 Chatbot HTML（避免被主版面的 flex/grid 壓縮）
+    document.getElementById("chatbot-container-root").innerHTML = `
+        <div class="chatbot-widget" style="
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 340px;
+            height: 480px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 999999;
+        ">
+            <div class="chatbot-header"
+                style="background:#003f7f;color:white;padding:12px;font-weight:bold;">
+                產經小助手
+            </div>
+            <div class="chatbot-body" id="chatBody" style="
+                flex:1;padding:12px;overflow-y:auto;background:#fff;">
+            </div>
+            <div class="chatbot-input" style="display:flex;border-top:1px solid #ddd;">
+                <input id="userInput" placeholder="請輸入您的問題..."
+                    style="flex:1;padding:10px;border:none;outline:none;">
+                <button onclick="sendMessage()" style="
+                    background:#ff6b00;color:white;border:none;padding:10px 14px;">
+                    送出
+                </button>
+            </div>
+        </div>
+    `;
+</script>
+
+<script src="chatbot.js"></script>
 
 </body>
 </html>
+
