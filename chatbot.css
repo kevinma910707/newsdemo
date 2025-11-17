@@ -96,3 +96,37 @@
     border-radius: 6px;
     cursor: pointer;
 }
+/* 強制讓 AI 小幫手顯示並固定在右下角 */
+.chatbot-widget {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 340px !important;
+    height: 480px !important;
+    background: #fff !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    z-index: 999999 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 強制讓輸入框與按鈕顯示 */
+.chatbot-input {
+    display: flex !important;
+}
+
+.chatbot-input input {
+    flex: 1 !important;
+}
+
+/* 強制聊天內容區出現 */
+.chatbot-body {
+    display: block !important;
+    overflow-y: auto !important;
+    background: #ffffff !important;
+}
+
