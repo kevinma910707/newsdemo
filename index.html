@@ -22,18 +22,17 @@
     <a href="category.html?type=公益">公益</a>
 </nav>
 
-<!-- ======== Header ======== -->
+<!-- ======== 頁首（藍色背景） ======== -->
 <header class="page-header">
     <h1>今日焦點新聞</h1>
     <p>快速掌握紡纖、石化、水泥、零售、金融、電信、公益等產業動態。</p>
 </header>
 
-
 <main>
 
 <!-- ==================== 1. 紡纖 ==================== -->
 <section class="industry-section">
-    <h2>紡纖產業</h2>
+    <h2>紡織產業</h2>
     <div class="news-grid">
         <div class="news-card">
             <h3>遠東新今年聚酯需求回升</h3>
@@ -111,8 +110,8 @@
     <h2>電信產業</h2>
     <div class="news-grid">
         <div class="news-card">
-            <h3>遠傳AI x 5G 賦能智慧城市新未來</h3>
-            <p>遠傳資訊長胡德民出席「2025智慧永續城市國際論壇」……</p>
+            <h3>遠傳完成 3G 關台並推動節能</h3>
+            <p>AI 網路管理提升能源效率與覆蓋品質……</p>
         </div>
         <div class="news-card">
             <h3>中華電投入企業 5G 專網</h3>
@@ -127,19 +126,27 @@
     <div class="news-grid">
         <div class="news-card">
             <h3>徐有庠基金會宣布 2025 科技獎入圍名單</h3>
-            <p>2025 科技獎正式公布入圍名單，表揚對科學研究與技術發展具重要貢獻的頂尖人才……</p>
+            <p>2025 科技獎正式公布入圍名單，表揚重要科研與技術人才……</p>
         </div>
         <div class="news-card">
-            <h3>CSR 趨勢持續擴大</h3>
-            <p>企業公益參與逐年上升，成為永續治理的重要指標……</p>
+            <h3>CSR 趨勢擴大</h3>
+            <p>企業 ESG 行動成為永續治理重要指標……</p>
         </div>
     </div>
 </section>
 
 </main>
 
-<!-- ======== Chatbot Root ======== -->
-<div id="chatbot-container-root"></div>
+<!-- ======== Chatbot ======== -->
+<div class="chatbot-widget">
+    <div class="chatbot-header">產經小助手</div>
+    <div class="chatbot-body" id="chatBody"></div>
+    <div class="chatbot-input">
+        <input id="userInput" placeholder="請輸入您的問題...">
+        <button onclick="sendMessage()">送出</button>
+    </div>
+</div>
+
 <script src="chatbot.js"></script>
 
 </body>
