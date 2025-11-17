@@ -21,6 +21,16 @@ body {
     text-decoration: none;
     font-weight: 500;
 }
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
 
 .nav-links a:hover {
     text-decoration: underline;
@@ -86,3 +96,4 @@ body::after {
     display: block;
     height: 80px;
 }
+
