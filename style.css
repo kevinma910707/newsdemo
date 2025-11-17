@@ -14,7 +14,7 @@ body {
 }
 
 /* ================================
-   右上角分類選單（白字）
+   右上角分類選單
 ================================ */
 .top-nav {
     position: absolute;
@@ -27,7 +27,7 @@ body {
 .top-nav a {
     font-weight: 700;
     font-size: 16px;
-    color: #ffffff;  /* 白字 */
+    color: #003f7f;
     text-decoration: none;
     padding: 4px 8px;
     border-radius: 4px;
@@ -35,10 +35,9 @@ body {
 }
 
 .top-nav a:hover {
-    background: rgba(255,255,255,0.2); 
-    color: #ffffff;
+    background: #003f7f;
+    color: white;
 }
-
 
 /* ================================
    頁首（藍色區塊）
@@ -205,4 +204,3 @@ body {
         right: 5%;
     }
 }
-
