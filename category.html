@@ -10,6 +10,14 @@
 </head>
 
 <body>
+    <script>
+    // 從網址讀取 type，例如 "紡纖"
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get("type");
+
+    document.getElementById("category-title").innerText = category + " 最新新聞";
+</script>
+
     <!-- Header -->
     <header class="navbar">
         <div class="logo">產經焦點新聞網</div>
@@ -105,3 +113,4 @@
 </body>
 
 </html>
+
