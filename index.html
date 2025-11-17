@@ -1,124 +1,153 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>今日焦點新聞</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="chatbot.css" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chatbot.css">
 </head>
 
 <body>
 
-    <!-- 右上角分類選單 -->
-    <nav class="top-nav">
-        <a href="#textile">紡織</a>
-        <a href="#chemical">石化</a>
-        <a href="#cement">水泥</a>
-        <a href="#retail">零售</a>
-        <a href="#finance">金融</a>
-        <a href="#telecom">電信</a>
-        <a href="#public">公益</a>
-    </nav>
+<!-- ======== 右上角分類選單 ======== -->
+<nav class="category-nav">
+    <a href="category.html?type=紡纖">紡纖</a>
+    <a href="category.html?type=石化">石化</a>
+    <a href="category.html?type=水泥">水泥</a>
+    <a href="category.html?type=零售">零售</a>
+    <a href="category.html?type=金融">金融</a>
+    <a href="category.html?type=電信">電信</a>
+    <a href="category.html?type=公益">公益</a>
+</nav>
 
-    <!-- Header -->
-    <header class="main-header">
-        <h1>今日焦點新聞</h1>
-        <p>快速掌握紡織、石化、水泥、零售、金融、電信、公益等產業動態。</p>
-    </header>
+<!-- ======== 頁首（藍色背景） ======== -->
+<header class="page-header">
+    <h1>今日焦點新聞</h1>
+    <p>快速掌握紡纖、石化、水泥、零售、金融、電信、公益等產業動態。</p>
+</header>
 
-    <main>
+<main>
 
-        <!-- 紡織 -->
-        <section id="textile">
-            <h2 class="section-title">紡織產業</h2>
-            <div class="news-grid">
-                <div class="news-card">
-                    <h3>遠東新今年聚酯需求回升</h3>
-                    <p>今年全球紡織市場呈現回溫，加上庫存回補需求浮現……</p>
-                </div>
-                <div class="news-card">
-                    <h3>台化推動低碳紡材升級</h3>
-                    <p>台化持續強化綠色生產線，推出多項回收聚酯產品……</p>
-                </div>
-            </div>
-        </section>
+<!-- ==================== 1. 紡纖 ==================== -->
+<section class="industry-section">
+    <h2>紡織產業</h2>
+    <div class="news-grid">
+        <div class="news-card">
+            <h3>遠東新今年聚酯需求回升</h3>
+            <p>今年全球紡織市場呈現回溫，加上庫存回補需求浮現……</p>
+        </div>
+        <div class="news-card">
+            <h3>台化推動低碳紡材升級</h3>
+            <p>台化持續強化綠色生產線，推出多項回收聚酯產品……</p>
+        </div>
+    </div>
+</section>
 
-        <!-- 石化 -->
-        <section id="chemical">
-            <h2 class="section-title">石化產業</h2>
-            <div class="news-grid">
-                <div class="news-card">
-                    <h3>國際油價震盪，產業利差收斂</h3>
-                    <p>受全球需求調整影響，近期石化產品報價出現波動……</p>
-                </div>
-                <div class="news-card">
-                    <h3>台塑集團啟動設備節能改造</h3>
-                    <p>台塑推動新一波節能工程，預期可降低能耗 8%……</p>
-                </div>
-            </div>
-        </section>
+<!-- ==================== 2. 石化 ==================== -->
+<section class="industry-section">
+    <h2>石化產業</h2>
+    <div class="news-grid">
+        <div class="news-card">
+            <h3>國際油價震盪，產業利差收斂</h3>
+            <p>受全球需求調整影響，近期石化產品報價出現波動……</p>
+        </div>
+        <div class="news-card">
+            <h3>台塑集團啟動設備節能改造</h3>
+            <p>台塑推動新一波節能工程，預期可降低能耗 8%……</p>
+        </div>
+    </div>
+</section>
 
-        <!-- 水泥 -->
-        <section id="cement">
-            <h2 class="section-title">水泥產業</h2>
-            <div class="news-grid">
-                <div class="news-card">
-                    <h3>工程動能帶動水泥需求上升</h3>
-                    <p>國內建設需求成長，水泥出貨持續回升……</p>
-                </div>
-                <div class="news-card">
-                    <h3>台泥大陸市場穩健回溫</h3>
-                    <p>大陸市場在政策支持下，需求小幅增長……</p>
-                </div>
-            </div>
-        </section>
+<!-- ==================== 3. 水泥 ==================== -->
+<section class="industry-section">
+    <h2>水泥產業</h2>
+    <div class="news-grid">
+        <div class="news-card">
+            <h3>工程動能帶動水泥需求上升</h3>
+            <p>國內建設需求續強，水泥出貨持續回升……</p>
+        </div>
+        <div class="news-card">
+            <h3>台泥大陸市場穩健回溫</h3>
+            <p>大陸市場在政策支持下，需求小幅增長……</p>
+        </div>
+    </div>
+</section>
 
-        <!-- 零售 -->
-        <section id="retail">
-            <h2 class="section-title">零售產業</h2>
-            <div class="news-grid">
-                <div class="news-card">
-                    <h3>全聯擴大 AI 補貨系統</h3>
-                    <p>AI 補貨全面提升營運效率，缺貨率降低 15%……</p>
-                </div>
-                <div class="news-card">
-                    <h3>家樂福 OMO 會員經濟成長</h3>
-                    <p>線上線下整合帶動整體消費動能……</p>
-                </div>
-            </div>
-        </section>
+<!-- ==================== 4. 零售 ==================== -->
+<section class="industry-section">
+    <h2>零售產業</h2>
+    <div class="news-grid">
+        <div class="news-card">
+            <h3>全聯擴大 AI 補貨系統</h3>
+            <p>AI 補貨全面提升營運效率，缺貨率降低 15%……</p>
+        </div>
+        <div class="news-card">
+            <h3>家樂福 OMO 會員經濟成長</h3>
+            <p>線上線下整合帶動整體消費動能……</p>
+        </div>
+    </div>
+</section>
 
-        <!-- 金融 -->
-        <section id="finance">
-            <h2 class="section-title">金融產業</h2>
-            <div class="news-grid">
-                <div class="news-card">
-                    <h3>金控公布最新 ESG 排名</h3>
-                    <p>永續表現趨勢成為市場競爭核心……</p>
-                </div>
-                <div class="news-card">
-                    <h3>央行關注通膨走勢</h3>
-                    <p>利率政策仍視經濟變化調整……</p>
-                </div>
-            </div>
-        </section>
+<!-- ==================== 5. 金融 ==================== -->
+<section class="industry-section">
+    <h2>金融產業</h2>
+    <div class="news-grid">
+        <div class="news-card">
+            <h3>金控公布最新 ESG 排名</h3>
+            <p>永續金融逐漸成為市場競爭核心……</p>
+        </div>
+        <div class="news-card">
+            <h3>央行關注通膨走勢</h3>
+            <p>利率政策仍視經濟變化調整……</p>
+        </div>
+    </div>
+</section>
 
-        <!-- 公益 -->
-        <section id="public">
-            <h2 class="section-title">公益產業</h2>
-            <div class="news-grid">
-                <div class="news-card">
-                    <h3>徐有庠基金會宣布 2025 科技獎入圍名單</h3>
-                    <p>今年科技獎參賽作品涵蓋 AI、生醫到材料創新……</p>
-                </div>
-            </div>
-        </section>
+<!-- ==================== 6. 電信 ==================== -->
+<section class="industry-section">
+    <h2>電信產業</h2>
+    <div class="news-grid">
+        <div class="news-card">
+            <h3>遠傳完成 3G 關台並推動節能</h3>
+            <p>AI 網路管理提升能源效率與覆蓋品質……</p>
+        </div>
+        <div class="news-card">
+            <h3>中華電投入企業 5G 專網</h3>
+            <p>帶動企業數位轉型，需求持續增長……</p>
+        </div>
+    </div>
+</section>
 
-    </main>
+<!-- ==================== 7. 公益 ==================== -->
+<section class="industry-section">
+    <h2>公益領域</h2>
+    <div class="news-grid">
+        <div class="news-card">
+            <h3>徐有庠基金會宣布 2025 科技獎入圍名單</h3>
+            <p>2025 科技獎正式公布入圍名單，表揚重要科研與技術人才……</p>
+        </div>
+        <div class="news-card">
+            <h3>CSR 趨勢擴大</h3>
+            <p>企業 ESG 行動成為永續治理重要指標……</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Chatbot -->
-    <script src="chatbot.js"></script>
+</main>
+
+<!-- ======== Chatbot ======== -->
+<div class="chatbot-widget">
+    <div class="chatbot-header">產經小助手</div>
+    <div class="chatbot-body" id="chatBody"></div>
+    <div class="chatbot-input">
+        <input id="userInput" placeholder="請輸入您的問題...">
+        <button onclick="sendMessage()">送出</button>
+    </div>
+</div>
+
+<script src="chatbot.js"></script>
 
 </body>
 </html>
