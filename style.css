@@ -1,211 +1,81 @@
-/* ================================
-   全站 Reset
-================================ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Noto Sans TC", sans-serif;
-}
-
+/* ===============================
+   全域設定
+=================================*/
 body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    margin: 0;
     background: #f5f7fb;
     color: #333;
 }
 
-/* ================================
-   右上角分類選單
-/* ================================
-   上方分類按鈕（右上角）
-=================================== */
-.top-nav {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    display: flex;
-    gap: 18px;
+main {
+    width: 88%;
+    margin: 40px auto;
 }
 
-.top-nav a {
+/* ===============================
+   頁首 – 藍色主視覺
+=================================*/
+.page-header {
+    width: 100%;
+    background: linear-gradient(135deg, #004a99, #0066cc);
+    padding: 70px 20px;
+    padding-bottom: 100px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 17px;
+    opacity: 0.95;
+}
+
+/* ===============================
+   右上角分類選單（你的 class）
+=================================*/
+.category-nav {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    display: flex;
+    gap: 18px;
+    z-index: 10;
+}
+
+.category-nav a {
     font-weight: 700;
     font-size: 16px;
-    color: white;       /* ←← 白色字 */
+    color: white;             /* 白字 */
     text-decoration: none;
-    padding: 4px 8px;
+    padding: 5px 10px;
     border-radius: 4px;
     transition: 0.2s ease;
 }
 
-.top-nav a:hover {
-    background: rgba(255,255,255,0.2);
+.category-nav a:hover {
+    background: rgba(255, 255, 255, 0.25);
     color: white;
 }
 
-}
-
-/* ================================
-   頁首（藍色區塊）
-================================ */
-.header {
-    width: 100%;
-    background: linear-gradient(135deg, #004a99, #0066cc);
-    padding: 80px 20px 70px;
-    color: white;
-    text-align: center;
-}
-
-.header h1 {
-    font-size: 36px;
+/* ===============================
+   各產業區塊
+=================================*/
+.industry-section h2 {
+    font-size: 26px;
     font-weight: 800;
+    color: #004a99;
+    margin-top: 45px;
 }
 
-.header p {
-    margin-top: 10px;
-    font-size: 16px;
-    opacity: 0.9;
-}
-
-/* ================================
-   Section 標題
-================================ */
-.section-title {
-    font-size: 22px;
-    font-weight: 900;
-    color: #003f7f;
-    border-left: 6px solid #ff6b00;
-    padding-left: 12px;
-    margin: 40px 0 20px;
-}
-
-/* ================================
-   新聞卡片排版
-================================ */
+/* ===============================
+   新聞卡片（兩欄）
+=================================*/
 .news-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    padding-bottom: 20px;
-}
-
-.news-card {
-    background: white;
-    padding: 24px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: 0.25s ease;
-}
-
-.news-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-}
-
-.news-card h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #004a99;
-    margin-bottom: 10px;
-}
-
-.news-card p {
-    color: #555;
-    line-height: 1.6;
-}
-
-/* ================================
-   Chatbot 對話框
-================================ */
-.chatbot-widget {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 340px;
-    height: 480px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    z-index: 9999;
-}
-
-.chatbot-header {
-    background: #003f7f;
-    color: white;
-    padding: 14px;
-    font-size: 16px;
-    font-weight: 800;
-}
-
-.chatbot-body {
-    flex: 1;
-    padding: 14px;
-    overflow-y: auto;
-    background: #fff;
-}
-
-.chatbot-input {
-    display: flex;
-    border-top: 1px solid #ddd;
-}
-
-.chatbot-input input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    outline: none;
-}
-
-.chatbot-input button {
-    background: #ff6b00;
-    color: white;
-    border: none;
-    padding: 10px 14px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Chatbot 訊息泡泡 */
-.msg-user {
-    background: #e6f1ff;
-    padding: 10px 14px;
-    border-radius: 10px;
-    margin: 8px 0;
-    align-self: flex-end;
-    max-width: 85%;
-}
-
-.msg-bot {
-    background: #f0f0f0;
-    padding: 10px 14px;
-    border-radius: 10px;
-    margin: 8px 0;
-    align-self: flex-start;
-    max-width: 85%;
-}
-
-/* ================================
-   手機 RWD
-================================ */
-@media (max-width: 768px) {
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .top-nav {
-        top: 10px;
-        right: 10px;
-        gap: 12px;
-    }
-
-    .top-nav a {
-        font-size: 14px;
-    }
-
-    .chatbot-widget {
-        width: 90%;
-        right: 5%;
-    }
-}
-
