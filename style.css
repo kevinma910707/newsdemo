@@ -19,8 +19,7 @@ main {
 .page-header {
     width: 100%;
     background: linear-gradient(135deg, #004a99, #0066cc);
-    padding: 70px 20px;
-    padding-bottom: 100px;
+    padding: 70px 20px 100px;
     color: white;
     text-align: center;
     position: relative;
@@ -38,7 +37,7 @@ main {
 }
 
 /* ===============================
-   右上角分類選單（你的 class）
+   右上角分類選單
 =================================*/
 .category-nav {
     position: absolute;
@@ -52,7 +51,7 @@ main {
 .category-nav a {
     font-weight: 700;
     font-size: 16px;
-    color: white;             /* 白字 */
+    color: white;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 4px;
@@ -65,7 +64,7 @@ main {
 }
 
 /* ===============================
-   各產業區塊
+   各產業小標
 =================================*/
 .industry-section h2 {
     font-size: 26px;
@@ -76,11 +75,6 @@ main {
 
 /* ===============================
    新聞卡片（兩欄）
-=================================*/
-.news-grid {
-    display: grid;
-/* ===============================
-   新聞卡片（兩欄） – 繼續補完
 =================================*/
 .news-grid {
     display: grid;
@@ -117,11 +111,10 @@ main {
 }
 
 /* ===============================
-   RWD（手機版變一欄）
+   RWD 手機版（一欄）
 =================================*/
 @media (max-width: 900px) {
     .news-grid {
         grid-template-columns: 1fr;
     }
 }
-
