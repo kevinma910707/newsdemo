@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>遠東產經焦點新聞網</title>
+    <title>產經焦點新聞網</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="chatbot.css">
 </head>
@@ -27,7 +27,7 @@
     <!-- Hero Banner -->
     <header class="hero">
         <h1>今日焦點新聞</h1>
-        <p>快速掌握紡纖、石化、水泥、零售、金融、電信、公益等產業趨勢動態。</p>
+        <p>快速掌握紡纖、石化、水泥、零售、金融、電信、公益等產業動態。</p>
     </header>
 
     <main class="content">
@@ -104,5 +104,52 @@
                     <h3>金控 ESG 排名公布</h3>
                     <p>永續金融成市場關注焦點...</p>
                 </div>
+            </div>
+        </section>
 
+        <!-- 電信 -->
+        <section class="news-section">
+            <h2 class="section-title">電信新聞</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <h3>遠傳導入 AI 打詐新系統</h3>
+                    <p>每日可阻擋超過 300 萬通詐騙訊息...</p>
+                </div>
+                <div class="news-card">
+                    <h3>中華電信擴大 5G SA 投資</h3>
+                    <p>預計 2026 年全台 90% 地區覆蓋...</p>
+                </div>
+            </div>
+        </section>
 
+        <!-- 公益 -->
+        <section class="news-section">
+            <h2 class="section-title">公益新聞</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <h3>徐有庠基金會宣布 2025 科技獎入圍名單</h3>
+                    <p>今年參賽作品聚焦永續、AI 與材料創新...</p>
+                </div>
+                <div class="news-card">
+                    <h3>遠東集團聯合辦理公益教育計畫</h3>
+                    <p>協助偏鄉學校推動數位素養課程...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- AI Chatbot（右下角固定） -->
+    <div class="chatbot-widget">
+        <div class="chatbot-header">產經小助手</div>
+        <div class="chatbot-body" id="chatBody"></div>
+        <div class="chatbot-input">
+            <input type="text" id="userInput" placeholder="請輸入您的問題...">
+            <button onclick="sendMessage()">送出</button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+
+</body>
+</html>
