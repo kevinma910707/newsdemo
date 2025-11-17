@@ -15,7 +15,9 @@ body {
 
 /* ================================
    右上角分類選單
-================================ */
+/* ================================
+   上方分類按鈕（右上角）
+=================================== */
 .top-nav {
     position: absolute;
     top: 20px;
@@ -27,7 +29,7 @@ body {
 .top-nav a {
     font-weight: 700;
     font-size: 16px;
-    color: #003f7f;
+    color: white;       /* ←← 白色字 */
     text-decoration: none;
     padding: 4px 8px;
     border-radius: 4px;
@@ -35,8 +37,10 @@ body {
 }
 
 .top-nav a:hover {
-    background: #003f7f;
+    background: rgba(255,255,255,0.2);
     color: white;
+}
+
 }
 
 /* ================================
@@ -204,3 +208,4 @@ body {
         right: 5%;
     }
 }
+
