@@ -14,13 +14,6 @@ body {
     padding: 12px 24px;
     color: white;
 }
-
-.nav-links a {
-    color: white;
-    margin-left: 16px;
-    text-decoration: none;
-    font-weight: 500;
-}
 .nav-link {
     color: #ffffff;
     text-decoration: none;
@@ -96,4 +89,5 @@ body::after {
     display: block;
     height: 80px;
 }
+
 
